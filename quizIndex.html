@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>My Timed Quiz</title>
+    <style src="./assets/css/quizStyle.css"></style>
   </head>
+
   <body>
-    <header>
+
       <!-- high score display top left --- timer top right -->
+    <header class="header">
+      <div>High Scores</div> <!-- add a href to separate page to display scores-->
+      <div>Time Remaining: <span id="timer">75</span></div>
     </header>
 
-    <h1>
-      <!-- title/info/questions -->
-    </h1>
+      <!-- main quiz section -->
+    <section class="main">
+      <div id="quiz-page">
+        <h1>Almost Jeopardy!</h1>
+        <p>Here is a quiz for fans of the TV game show, Jeopardy!<br>
+           There are 5 questions in multiple-choice format.  You have 75 seconds to answer them all!<br>
+           Your answer will queue the next question. Incorrect answers will deduct 10 seconds from your timer.<br>
+           After the quiz, your score will be tallied and recorded.  Are you ready?  Let's play Almost Jeopardy!  
+        </p>
+      </div>
+
+    </section>
+
   </body>
+  <script src="./assets/js/quizScript.js"></script>
 </html>
