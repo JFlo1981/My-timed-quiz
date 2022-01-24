@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #2805F0;
-    color: #E4F778;
+    color: #2805F0;
 }
 /* header style */
 .header {
@@ -33,6 +33,71 @@ body {
 }
 
 a:hover {
-    font-size: larger;
+    color: #02E825;
     text-shadow: 2px 2px 5px azure;
+}
+
+.hide {
+    display: none;
+}
+/* main content on centered card */
+.main {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 80%;
+    padding: 20px;
+    text-align: center;
+    background-color: #E4F778;
+    border: 2px solid #02E825;
+    border-radius:  25px;
+    box-shadow: 0 2px 8px 9px #02E825;
+}
+
+/* styling the buttons */
+.btn {
+    border: 1px solid #2805F0;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 2px #02E825;
+    background-color: #2805F0;
+    padding: 15px 20px;
+    margin: 15px;
+    color: #E4F778;
+    font-size: large;
+    width: 40%;
+}
+
+.btn.score-btn {
+    border-width: 2px;
+    padding: 5px;
+    font-size: medium;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #02E825;
+    box-shadow: 0 2px 8px 2px #2805F0;
+    color: #2805F0;
+}
+
+/* buttons will change color based on correct vs incorrect */
+.btn.correct {
+    background-color: #02E825;
+    border-color: #2805F0;
+    box-shadow: 0 2px 8px 2px #02E825;
+}
+
+.btn.wrong {
+    background-color: #CF503A;
+    border-color: #9C2510;
+    box-shadow: 0 2px 8px 2px #CF503A;
+}
+
+/* screen size modification */
+@media screen and (max-width: 576px){
+    .btn {
+        width: 80%;
+        padding: 10px 15px;
+        margin: 5px 10px;
+    }
 }
