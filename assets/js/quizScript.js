@@ -45,6 +45,22 @@ function startTimer() {
 };
 
 // set up question cycle function
+function cycleQuestion() {
+    currentQues++;
+    if (currentQues === shuffleQuestions.length) {
+        timeRem = 0;
+        gameOver();
+    } else {
+        questionEl.textContent = shuffleQuestions[currentQues].question;
+        let ansArray = [asn1, ans2, ans3, ans4];
+        let i = 0;
+        ansArray.forEach(element => {
+            element.textContent = shuffleQuestions[currentQues].answersArray[i].answer;
+            i++
+        }, i);
+
+    }
+};
 // setup correct vs incorrect
 // set up end quiz and score display
 // set up initials entry logged in local storage
