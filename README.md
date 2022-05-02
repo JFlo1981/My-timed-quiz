@@ -6,7 +6,7 @@ Upon clicking start, a countdown begins and a randomly generated question with r
 begins.  Upon completion or expiration of time an initials input is given for recording high scores locally.
 ## Screenshots
 
-[![image](https://user-images.githubusercontent.com/88595179/166183202-21478205-5a9e-4f3c-922f-c547cd369c37.png)](https://jflo1981.github.io/My-timed-quiz/)
+[![image](https://user-images.githubusercontent.com/88595179/166183202-21478205-5a9e-4f3c-922f-c547cd369c37.png)](https://jflo1981.github.io/My-timed-quiz/index.html)
 ## Authors
 
 - [@JFlo1981](https://www.github.com/JFlo1981)
