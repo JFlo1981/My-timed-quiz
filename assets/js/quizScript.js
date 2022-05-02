@@ -94,12 +94,12 @@ function getCorrectChoice(currentQues) {
 function gameOver () {
     timerEl.textContent = 0;
     nextDiv('question-bank', 'scores-page');
-    finalScore = currentScore + timeRem;
+    finalScore = currentScore;
     finalScoreEl.textContent = finalScore;
 }
 // set up initials entry logged in local storage
 function handleSubmit() {
-    let initials = initialsEl.ariaValueMax;
+    let initials = initialsEl.value;
     let highScoreList = JSON.parse(localStorage.getItem('highScores')) || [];
     highScoreList.push({ initials: initials, score: finalScore});
     // sort array by highest score
@@ -114,6 +114,6 @@ function handleSubmit() {
     });
     
     // send array to storage and go to scores page
-    localStorage.setItem('highScore', JSON.stringify(highScoreList))
+    localStorage.setItem('highScores', JSON.stringify(highScoreList))
     window.location.href = './scores.html';
 };

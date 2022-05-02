@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores</title>
     <link href="./assets/css/quizStyle.css" rel="stylesheet">
+    <script defer src="./assets/js/questionList.js"></script>
+    <script defer src="./assets/js/quizScript.js"></script>
+    <script defer src="./assets/js/scores.js"></script>
 </head>
 <body>
     <header class="header">
@@ -14,9 +17,13 @@
       </header>
       <section class="main">
           <h1>High Scores</h1>
-          <div id="highscores-list"></div>
+          <ul id="highscores-list">
+              
+          </ul>
           <button class="btn" onclick="window.location.href='./quizIndex.html'">Try Again?</button>
           <button class="btn" onclick="resetScore()">Reset Scores?</button>
       </section>
+
+    
 </body>
 </html>

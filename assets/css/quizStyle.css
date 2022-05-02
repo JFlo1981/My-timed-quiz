@@ -87,6 +87,7 @@ a:hover {
     transform: scale(1.07);
 }
 
+
 /* buttons will change color based on correct vs incorrect */
 .btn.correct {
     background-color: #02E825;
@@ -99,6 +100,10 @@ a:hover {
     border-color: #9C2510;
     box-shadow: 0 2px 8px 2px #CF503A;
 }
+
+ul {
+    list-style-type: none;
+   }
 
 /* screen size modification */
 @media screen and (max-width: 576px){
