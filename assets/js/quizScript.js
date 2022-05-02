@@ -52,10 +52,10 @@ function cycleQuestion() {
         gameOver();
     } else {
         questionEl.textContent = shuffleQuestions[currentQues].question;
-        let ansArray = [ans1, ans2, ans3, ans4];
+        let arr = [ans1, ans2, ans3, ans4];
         let i = 0;
-        ansArray.forEach(element => {
-            element.textContent = shuffleQuestions[currentQues].answersArray[i].answer;
+        arr.forEach(element => {
+            element.textContent = shuffleQuestions[currentQues].answerArray[i].answer;
             i++
         }, i);
 
@@ -81,8 +81,8 @@ function handleAnswerChoice(event) {
         }, 500);
 };
 
-function showCorrectAnswer(currentQues) {
-    let arr = shuffleQuestions[currentQues].answersArray;
+function getCorrectChoice(currentQues) {
+    let arr = shuffleQuestions[currentQues].answerArray;
     for (let j = 0; j < arr.length; j++) {
         if (arr[j].correct) {
             return arr[j].answer
@@ -112,6 +112,7 @@ function handleSubmit() {
             return 0
         }
     });
+    
     // send array to storage and go to scores page
     localStorage.setItem('highScore', JSON.stringify(highScoreList))
     window.location.href = './scores.html';

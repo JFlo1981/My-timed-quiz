@@ -33,10 +33,10 @@
         <!-- question queue & answer buttons here -->
       <div id="question-bank" class="hide">
         <h2 id="question"></h2>
-        <button id="ans1" class="btn" onclick="handleAnswerClick(event)"></button>
-        <button id="ans2" class="btn" onclick="handleAnswerClick(event)"></button>
-        <button id="ans3" class="btn" onclick="handleAnswerClick(event)"></button>
-        <button id="ans4" class="btn" onclick="handleAnswerClick(event)"></button>
+        <button id="ans1" class="btn" onclick="handleAnswerChoice(event)"></button>
+        <button id="ans2" class="btn" onclick="handleAnswerChoice(event)"></button>
+        <button id="ans3" class="btn" onclick="handleAnswerChoice(event)"></button>
+        <button id="ans4" class="btn" onclick="handleAnswerChoice(event)"></button>
       </div>  
 
         <!-- score display and initials input here -->
@@ -45,12 +45,13 @@
         <p>You scored <span id="final-score"></span> points!</p>
         <label>Enter your initials to record your score!</label>
         <input type="text" id="initials" size="7">
-        <button id="record-score" class="btn score-btn" onclick="handleScore()">Record Score</button>
+        <button id="record-score" class="btn score-btn" onclick="handleSubmit()">Record Score</button>
       </div>  
     </section>
     
-    <script src="./assets/js/quizScript.js"></script>
     <script src="./assets/js/questionList.js"></script>
+    <script src="./assets/js/quizScript.js"></script>
+    
 
   </body>
 

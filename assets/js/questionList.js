@@ -47,7 +47,7 @@ const questionList = [
     }
 ];
 
-function shuffleQuesAndAnswers() {
+function shuffleQues() {
     let newQuestionList = questionList;
     // shuffle answer order
     for (let i = 0; i < newQuestionList.length; i++) {
