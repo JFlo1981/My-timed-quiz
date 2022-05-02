@@ -23,9 +23,9 @@ function nextDiv(current, next) {
 };
 
 // start game function to start timer and queue first question
-function startQuiz() {
+function letsPlay() {
     nextDiv('start-quiz', 'question-bank');
-    nextQuestion();
+    cycleQuestion();
     startTimer();
 
 };
@@ -52,7 +52,7 @@ function cycleQuestion() {
         gameOver();
     } else {
         questionEl.textContent = shuffleQuestions[currentQues].question;
-        let ansArray = [asn1, ans2, ans3, ans4];
+        let ansArray = [ans1, ans2, ans3, ans4];
         let i = 0;
         ansArray.forEach(element => {
             element.textContent = shuffleQuestions[currentQues].answersArray[i].answer;
