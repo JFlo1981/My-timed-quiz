@@ -62,5 +62,57 @@ function cycleQuestion() {
     }
 };
 // setup correct vs incorrect
+function handleAnswerChoice(event) {
+    let correctChoice = getCorrectChoice(currentQues);
+    // if correct =10 and green indicator
+    if(event.target.textContent === correctChoice) {
+        currentScore += 10;
+        event.target.classList.add('correct')
+        // if wrong -10 and red indicator
+    } else {
+        timeRem -= 10;
+        event.target.classList.add('wrong')
+    }
+    // pause before new question
+    setTimeout(
+        () => {
+            event.target.className = 'btn';
+            cycleQuestion();
+        }, 500);
+};
+
+function showCorrectAnswer(currentQues) {
+    let arr = shuffleQuestions[currentQues].answersArray;
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j].correct) {
+            return arr[j].answer
+        }
+    }
+};
+
 // set up end quiz and score display
+function gameOver () {
+    timerEl.textContent = 0;
+    nextDiv('question-bank', 'scores-page');
+    finalScore = currentScore + timeRem;
+    finalScoreEl.textContent = finalScore;
+}
 // set up initials entry logged in local storage
+function handleSubmit() {
+    let initials = initialsEl.ariaValueMax;
+    let highScoreList = JSON.parse(localStorage.getItem('highScores')) || [];
+    highScoreList.push({ initials: initials, score: finalScore});
+    // sort array by highest score
+    highScoreList = highScoreList.sort((current, next) => {
+        if (current.score < next.score) {
+            return 1
+        } else if (current.score > next.score) {
+            return -1
+        } else {
+            return 0
+        }
+    });
+    // send array to storage and go to scores page
+    localStorage.setItem('highScore', JSON.stringify(highScoreList))
+    window.location.href = './scores.html';
+};
