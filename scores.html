@@ -5,8 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores</title>
+    <link href="./assets/css/quizStyle.css" rel="stylesheet">
 </head>
 <body>
-    test
+    <header class="header">
+        <div><a href="./scores.html">High Scores</a></div> 
+        <div>Time Remaining: <span id="timer">0</span></div>
+      </header>
+      <section class="main">
+          <h1>High Scores</h1>
+          <div id="highscores-list"></div>
+          <button class="btn" onclick="window.location.href='./quizIndex.html'">Try Again?</button>
+          <button class="btn" onclick="resetScore()">Reset Scores?</button>
+      </section>
 </body>
 </html>
